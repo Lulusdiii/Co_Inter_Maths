@@ -1,7 +1,9 @@
 from pylab import *
-xlim(0,10)
-ylim(0,10)
-x=[3,7,7,3,3]
-y=[3,3,7,7,3]
-plot(x,y,linewidth=3,*'r')
+xlim(0,20)
+ylim(2,4)
+x=[2,6,0,5]
+y=3
+for i in range(10):
+    x=5+i
+    plot(x,y,'ob')
 show()
