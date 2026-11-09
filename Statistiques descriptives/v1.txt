@@ -1,0 +1,102 @@
+n = 0
+Total = 0
+Répéter 31 fois
+    Entrer une température
+    Total = Total + temperature
+Moyenne = Total / 31
+Afficher moyenne
+```[cite: 1]
+
+---
+
+## 2. Traduire cet algorithme en langage Python
+
+```python
+total = 0
+for i in range(31):
+    temperature = float(input("Entrer une température : "))
+    total = total + temperature
+moyenne = total / 31
+print("La moyenne est :", moyenne)
+```[cite: 1]
+
+---
+
+## 3. Algorithme pour déterminer la valeur minimale
+
+```text
+min = 100  # ou la première température saisie
+Répéter 31 fois
+    Entrer une température
+    Si temperature < min alors
+        min = temperature
+Afficher min
+```[cite: 1]
+
+---
+
+## 4. Amélioration pour déterminer le minimum et le maximum
+
+```text
+min = 100
+max = -100
+Répéter 31 fois
+    Entrer une température
+    Si temperature < min alors
+        min = temperature
+    Si temperature > max alors
+        max = temperature
+Afficher min
+Afficher max
+```[cite: 1]
+
+---
+
+## 5. Amélioration pour déterminer l'étendue
+
+```text
+min = 100
+max = -100
+Répéter 31 fois
+    Entrer une température
+    Si temperature < min alors
+        min = temperature
+    Si temperature > max alors
+        max = temperature
+etendue = max - min
+Afficher etendue
+```[cite: 1]
+
+---
+
+## 6. Traduction de l'algorithme de la question 5 en Python
+
+```python
+min_temp = float('inf')
+max_temp = float('-inf')
+
+for i in range(31):
+    temperature = float(input("Entrer une température : "))
+    if temperature < min_temp:
+        min_temp = temperature
+    if temperature > max_temp:
+        max_temp = temperature
+
+etendue = max_temp - min_temp
+print("L'étendue est :", etendue)
+```[cite: 1]
+
+---
+
+## 7. Algorithme pour déterminer la médiane avec un tableau
+
+```text
+aout = [22, 22.6, 21.1, 21.9, 18.3, 18.7, 21.7, 21.1, 23.6, 27.4, 25.1, 24.9, 23.7, 28.9, 23.2, 26.1, 26.1, 29.8, 28.2, 28.7, 25.9, 26.7, 30.3, 25.2, 21.8, 22, 20.9, 20.7, 20.6, 19.5, 18.8]
+
+sort(aout)
+# L'effectif total est 31 (impair). La médiane est la valeur de rang (31 + 1) / 2 = 16.
+# En programmation, les indices commencent souvent à 0, donc l'élément de rang 16 correspond à l'indice 15.
+
+mediane = aout[15]
+Afficher mediane
+```[cite: 1]
